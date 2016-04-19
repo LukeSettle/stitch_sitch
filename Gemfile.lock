@@ -508,6 +508,7 @@ DEPENDENCIES
   rb-fchange
   rb-fsevent
   rb-inotify
+  redis
   render_anywhere
   responders
   rspec-rails
