@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: stich_sich
+  pool: 5
+  username: lukesettle
+  password: greentree15
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: test_stich_sich
+  pool: 5
+  username: lukesettle
+  password: greentree15

@@ -1,0 +1,4 @@
+p= @picture.title
+= image_tag @picture.image, class: 'show-image'
+- if @picture.user == current_user
+  = link_to '', picture_path(@picture), method: :delete, class: 'fa fa-lg fa-trash-o'

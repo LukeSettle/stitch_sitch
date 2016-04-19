@@ -1,0 +1,16 @@
+.cards
+  - current_user.pictures.each do |picture|
+    .card
+      .card-image
+        = link_to picture_path(picture)
+          = image_tag picture.image
+      .card-header
+        = picture.title
+        .votes
+          .up-vote.fa.fa-chevron-up data-id="#{picture.id}"
+          .down-vote.fa.fa-chevron-down data-id="#{picture.id}"
+          .score[id="score_#{picture.id}"]= picture.score
+      .card-copy
+        = picture.description
+          
+= link_to '', new_picture_path, class: 'btn fa fa-plus'

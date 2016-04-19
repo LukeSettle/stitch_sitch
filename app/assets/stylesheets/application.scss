@@ -1,0 +1,42 @@
+@import "bourbon";
+@import "neat";
+@import "base/base";
+@import "font-awesome";
+@import "feed";
+@import "pictures";
+@import "refills/*";
+
+body {
+  background-color: $base-background-color;
+}
+
+.sliding-panel-button {
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar-visible {
+  transform: translateX(220px) rotate(180deg);
+  transition: all 0.25s linear;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 3px solid #fff;
+  margin: 1em 0;
+  padding: 0;
+}
+
+#stitch-sitch-logo{
+  width: 37%;
+  display: block;
+  margin: 0px auto;
+}
+
+.header-text {
+  color: $action-color;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
