@@ -55,6 +55,7 @@ gem 'bitters', '~> 1.2'
 
 group :production do
   gem 'newrelic_rpm'
+  gem 'rails_12factor'
 end
 
 group :staging, :production do
