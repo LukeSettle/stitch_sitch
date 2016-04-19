@@ -13,3 +13,11 @@ test:
   pool: 5
   username: lukesettle
   password: greentree15
+
+production:
+    adapter: postgresql
+    encoding: unicode
+    database: stich_sich
+    pool: 5
+    username: lukesettle
+    password: greentree15
