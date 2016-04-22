@@ -1,8 +1,27 @@
-.votes {
-  float: right;
+.card-header {
 
-  .score {
-    display: inline;
-    margin-left: 10px;
+  .title {
+    max-width: 80%;
+  }
+
+  .liking {
+    float: right;
+    position: relative;
+    bottom: 23px;
+
+    .likes {
+      display: inline;
+      margin-left: 10px;
+    }
+
+    .like {
+      color: $red;
+    }
+
+    .liked {
+      color: aqua;
+      transform: rotate(360deg) scale(1);
+      transition: all 0.25s linear;
+    }
   }
 }

@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
   authenticated!
-  
+
   def new
     @picture = Picture.new
   end
@@ -19,13 +19,6 @@ class PicturesController < ApplicationController
     @picture = Picture.find(params[:id])
     @picture.destroy
     redirect_to root_path
-  end
-
-  def vote
-    @picture = Picture.find(params[:id])
-    @picture.score += params[:score].to_i
-    @picture.save
-    render json: @picture
   end
 
   protected

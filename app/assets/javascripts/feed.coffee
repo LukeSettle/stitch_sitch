@@ -1,16 +1,14 @@
 $ ->
-  $(".up-vote").click (e) ->
-    vote(1, e.currentTarget.dataset.id)
-  $(".down-vote").click (e) ->
-    vote(-1, e.currentTarget.dataset.id)
+  $('.like').click (e) ->
+    like(e.currentTarget.dataset.id)
+    el = $(e.currentTarget)
+    el.addClass('liked')
 
-vote = (score, id) ->
+like = (id) ->
   $.ajax({
     type: "POST",
-    url: "/pictures/#{id}/vote",
-    data: { score: score, id: id },
+    url: "/likes",
+    data: { picture_id: id },
     success:(data) ->
-      $("#score_#{id}").text(data.score)
-    error:(data) ->
-      alert 'failure'
+      $("#likes_#{id}").text(data)
   })

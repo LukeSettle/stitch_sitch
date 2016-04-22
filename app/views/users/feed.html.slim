@@ -3,13 +3,11 @@
     .card
       .card-image
         = link_to picture_path(picture)
-          = image_tag picture.image
+          = image_tag picture.image.url
       .card-header
-        = picture.title
-        .votes
-          .up-vote.fa.fa-chevron-up data-id="#{picture.id}"
-          .down-vote.fa.fa-chevron-down data-id="#{picture.id}"
-          .score[id="score_#{picture.id}"]= picture.score
+        .title
+          = picture.title
+        = render partial: 'shared/likes', locals: { picture: picture }
       .card-copy
         = picture.description
           

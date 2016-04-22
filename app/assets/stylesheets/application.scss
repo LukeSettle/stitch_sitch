@@ -6,6 +6,12 @@
 @import "pictures";
 @import "refills/*";
 
+#menu-button.sticky {
+   position: fixed;
+   top: 5;
+   z-index: 9999;
+}
+
 body {
   background-color: $base-background-color;
 }

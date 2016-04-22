@@ -1,5 +1,6 @@
+#target
 = simple_form_for @picture do |f|
-  = f.file_field :image
+  = f.file_field :image, id: 'pictureInput'
   = f.input :title
   = f.input :description, as: :text
   = f.button :submit, class: 'btn'

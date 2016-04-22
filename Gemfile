@@ -18,7 +18,7 @@ gem 'aws-sdk'
 
 gem 'aws-healthcheck'
 gem 'capistrano-sidekiq'
-gem 'carrierwave'
+gem "paperclip", "~> 5.0.0.beta1"
 gem 'connection_pool'
 gem 'devise'
 gem 'devise-async'

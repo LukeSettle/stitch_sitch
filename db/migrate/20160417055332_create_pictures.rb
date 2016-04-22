@@ -3,7 +3,7 @@ class CreatePictures < ActiveRecord::Migration
     create_table :pictures do |t|
       t.string :title
       t.string :description
-      t.string :image
+      t.has_attached_file :image
       t.references :user, index: true
 
       t.timestamps null: false

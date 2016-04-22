@@ -1,4 +1,5 @@
 p= @picture.title
-= image_tag @picture.image, class: 'show-image'
+= image_tag @picture.image.url, class: 'show-image'
 - if @picture.user == current_user
   = link_to '', picture_path(@picture), method: :delete, class: 'fa fa-lg fa-trash-o'
+= render partial: 'shared/likes', locals: { picture: @picture }
