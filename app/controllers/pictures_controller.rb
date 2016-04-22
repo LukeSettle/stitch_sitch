@@ -1,4 +1,6 @@
 class PicturesController < ApplicationController
+  authenticated!
+  
   def new
     @picture = Picture.new
   end
